@@ -1,0 +1,301 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: thin;
+    scrollbar-color: #f77898 #0d0d0d;
+}
+
+:root {
+    overscroll-behavior-y: none !important;
+    /* threw this in here and a dozen other places thinking it would make it so you can scroll while hovering over one of the Tumblr embeds. 
+    it's the right property but i have no idea how to make it actually work. whatever, it's gonna stay in as a reminder of what Tumblr puts me through.*/
+}
+
+body {
+    display: flex;
+    font-family: Arial;
+    line-height: 1.4;
+    color: #e0e0e0;
+    background-color: #0d0d0d;
+    height: 100%;
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    overscroll-behavior-y: none !important;
+}
+
+ul {
+    /* nav bar stuff*/
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+ul li {
+    /* item list in nav bar */
+    float: left;
+}
+
+ul li a {
+    /* link in nav bar */
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a {
+    color: #f77898;
+    text-decoration: none;
+}
+
+ul li a:hover {
+    /* mouse over link */
+    color: hotpink;
+}
+
+.image {
+    border-radius: 11px;
+    height: fit-content;
+    max-width: 35%;
+    align-self: center;
+}
+
+.emoji {
+    width: 2em;
+    height: 2em;
+}
+
+aside {
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    /* adjust based on nav bar height */
+    left: 0;
+    width: 30%;
+    max-width: 350px;
+    min-width: 200px;
+}
+
+.sidebar {
+    padding: 20px;
+    background-color: #1a1a1a;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.grid {
+    /* multi-column layout for gallery, took the code from somewhere online so i don't know why i would use -webkit and -moz.
+    it's clearly something regarding Safari webkit and Mozilla Firefox but I don't use either of those enough to know the difference.*/
+    -webkit-column-count: 3;
+    -webkit-column-gap: 1%;
+    -moz-column-count: 3;
+    -moz-column-gap: 1%;
+    column-count: 4;
+    column-gap: 1%;
+    gap: 1%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+i {
+    line-height: 1.6;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.bubble {
+    display: flex;
+    flex-direction: row;
+    margin: 20px;
+    margin-left: min(calc(30% + 25px), calc(350px + 25px));
+    min-width: 400px;
+    max-width: 70%;
+    padding: 20px;
+    position: relative;
+    background: #1a1a1a;
+
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 10px;
+    border-color: #1a1a1a;
+    box-shadow: 0px 0px 0px #1a1a1a;
+
+    top: 0;
+    transition: 0.5s;
+}
+
+.bubble:hover {
+    top: -10px;
+}
+
+.bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #1a1a1a;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-left: -23px;
+}
+
+.mini-bubble {
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    min-width: 300px;
+    max-width: 70%;
+    margin: 20px;
+    margin-left: min(calc(30% + 25px), calc(350px + 25px));
+    padding: 10px;
+    position: relative;
+    background: #2e2e2e;
+    background-image: linear-gradient(to right, rgb(207, 31, 84), rgb(209, 34, 63));
+    border-radius: 10px;
+    box-shadow: 0 3px 0px rgb(0, 0, 0);
+}
+
+.mini-bubble:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: rgb(207, 31, 84);
+    border-left: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+
+.gallery-bubble {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    margin-left: min(calc(30% + 15px), calc(350px + 15px));
+
+    min-width: 400px;
+    max-width: 80%;
+    padding: 20px;
+    position: relative;
+    background: #1a1a1a;
+
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #1a1a1a;
+    background-color: #f1f9ff;
+
+    box-shadow: 0px 0px 0px #1a1a1a;
+
+    top: 0;
+    transition: 0.5s;
+}
+
+.tumblr-embed {
+    overscroll-behavior-y: none !important;
+    border-radius: 10px;
+    border-style: hidden;
+    position: relative;
+    top: 0px;
+    transition: 0.5s;
+}
+
+.tumblr-embed:hover {
+    top: -10px;
+}
+
+.button {
+    background-color: #858585;
+    border-radius: 10px;
+    color: white;
+    margin-left: 5%;
+    margin-top: 2%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1222px) {
+
+    .container,
+    .bubble {
+        flex-direction: column;
+    }
+
+    .image {
+        max-width: min-content;
+        height: auto;
+        margin-bottom: 1%;
+    }
+
+}
+
+/* makes the grid have more/less columns based on screen size. there's probably an easier way to do this but i really don't care. */
+@media screen and (max-width: 1600px) {
+    .grid {
+        -webkit-column-count: 3;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 3;
+        -moz-column-gap: 0px;
+        column-count: 3;
+        column-gap: 0px;
+        gap: 1%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .grid {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 2;
+        -moz-column-gap: 0px;
+        column-count: 2;
+        column-gap: 0px;
+        gap: 1%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .grid {
+        -webkit-column-count: 1;
+        -webkit-column-gap: 0px;
+        -moz-column-count: 1;
+        -moz-column-gap: 0px;
+        column-count: 1;
+        column-gap: 0px;
+        gap: 1%;
+        width: 100%;
+    }
+}
