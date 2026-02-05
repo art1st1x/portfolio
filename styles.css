@@ -51,7 +51,7 @@ ul li a {
 a {
     color: #f77898;
     text-decoration: none;
-    display: flex;
+    
 }
 
 ul li a:hover {
@@ -74,13 +74,13 @@ ul li a:hover {
 }
 
 .emoji {
+    margin-left: 1%;
     width: 2em;
     height: 2em;
 }
 
 .secret {
     /* hidden image in footer */
-    overflow: hidden;
     float: right;
     background: url("img/idolpeek.gif") no-repeat;
     display: block;
@@ -96,7 +96,7 @@ ul li a:hover {
 }
 
 .secret:hover {
-    top: 100px;
+    top: 25px;
     background: url("img/idolpeek_shy.gif") no-repeat;
 }
 
@@ -274,8 +274,11 @@ p {
     cursor: pointer;
 }
 
-.footer {
+footer {
+    /* note how it's footer and not .footer. yeah i guess .s are only for custom classes, oops */
     width: fill;
+    height: 200px;
+    overflow: hidden;
 }
 
 
@@ -343,11 +346,11 @@ p {
     }
 
     .grid {
-        -webkit-column-count: 2;
+        -webkit-column-count: 1;
         -webkit-column-gap: 0px;
-        -moz-column-count: 2;
+        -moz-column-count: 1;
         -moz-column-gap: 0px;
-        column-count: 2;
+        column-count: 1;
         column-gap: 0px;
         gap: 1%;
         width: 100%;
