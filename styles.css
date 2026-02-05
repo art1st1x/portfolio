@@ -55,6 +55,7 @@ ul li a {
 a {
     color: #f77898;
     text-decoration: none;
+    display: flex;
 }
 
 ul li a:hover {
@@ -67,6 +68,13 @@ ul li a:hover {
     height: fit-content;
     max-width: 35%;
     align-self: center;
+}
+
+.video {
+    border-radius: 10px;
+    width: 100%;
+    height: fill;
+    aspect-ratio: 16/9;
 }
 
 .emoji {
@@ -179,6 +187,7 @@ p {
     background-image: linear-gradient(to right, rgb(207, 31, 84), rgb(209, 34, 63));
     border-radius: 10px;
     box-shadow: 0 3px 0px rgb(0, 0, 0);
+    transition: 0.5s;
 }
 
 .mini-bubble:after {
@@ -249,7 +258,7 @@ p {
 @media screen and (max-width: 1222px) {
 
     .container,
-    .bubble {
+    .bubble, a {
         flex-direction: column;
     }
 
@@ -288,20 +297,6 @@ p {
     }
 }
 
-/* @media screen and (max-width: 1000px) {
-    .grid {
-        -webkit-column-count: 1;
-        -webkit-column-gap: 0px;
-        -moz-column-count: 1;
-        -moz-column-gap: 0px;
-        column-count: 1;
-        column-gap: 0px;
-        gap: 1%;
-        width: 100%;
-    }
-} */
-
-
 @media screen and (max-width: 690px) {
 
     ul, .sidebar, .bubble:after, .mini-bubble:after {
@@ -314,6 +309,7 @@ p {
         margin-left: 10px;
         margin-right: 10px;
         max-width: 100%;
+        min-width: none;
     }
 
     .image {
