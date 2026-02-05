@@ -7,12 +7,6 @@
     scrollbar-color: #f77898 #0d0d0d;
 }
 
-:root {
-    overscroll-behavior-y: none !important;
-    /* threw this in here and a dozen other places thinking it would make it so you can scroll while hovering over one of the Tumblr embeds. 
-    it's the right property but i have no idea how to make it actually work. whatever, it's gonna stay in as a reminder of what Tumblr puts me through.*/
-}
-
 body {
     display: flex;
     font-family: Arial;
@@ -25,7 +19,9 @@ body {
 html {
     scroll-behavior: smooth;
     height: 100%;
-    overscroll-behavior-y: none !important;
+    overscroll-behavior-y: none
+    /* threw this in here and a dozen other places thinking it would make it so you can scroll while hovering over one of the Tumblr embeds. 
+    it's the right property but i have no idea how to make it actually work. whatever, it's gonna stay in as a reminder of what Tumblr puts me through.*/
 }
 
 ul {
@@ -82,9 +78,32 @@ ul li a:hover {
     height: 2em;
 }
 
+.secret {
+    /* hidden image in footer */
+    overflow: hidden;
+    float: right;
+    background: url("img/idolpeek.gif") no-repeat;
+    display: block;
+    visibility: visible;
+    padding: 10px;
+    height: 200px;
+    width: 200px;
+
+    /* transform set-up so she hides when hovered over */
+    top: 0;
+    position: relative;
+    transition: 1s;
+}
+
+.secret:hover {
+    top: 100px;
+    background: url("img/idolpeek_shy.gif") no-repeat;
+}
+
 aside {
     height: 100%;
     position: fixed;
+    overflow-y: hidden;
     top: 0px;
     /* adjust based on nav bar height */
     left: 0;
@@ -141,7 +160,6 @@ p {
     min-width: 400px;
     max-width: 70%;
     padding: 20px;
-    position: relative;
     background: #1a1a1a;
 
     border-style: solid;
@@ -150,7 +168,9 @@ p {
     border-color: #1a1a1a;
     box-shadow: 0px 0px 0px #1a1a1a;
 
+    /* remember! this is the stuff you need in a class for it to move on hover!!! */
     top: 0;
+    position: relative;
     transition: 0.5s;
 }
 
@@ -252,6 +272,10 @@ p {
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
+}
+
+.footer {
+    width: fill;
 }
 
 
