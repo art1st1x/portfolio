@@ -149,7 +149,7 @@ i {
 }
 
 p {
-    line-height: 1.6;
+    line-height: 2;
 }
 
 .bubble {
@@ -211,6 +211,10 @@ p {
     top: 0;
     position: relative;
     transition: 0.5s;
+}
+
+.card:hover {
+    top: -10px;
 }
 
 /* per-card stylings so I don't have to do so much styling in the HTML like a freak */
