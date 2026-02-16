@@ -35,8 +35,16 @@
     <main>
 
         <hgroup class="mini-bubble" id="about">
-            <img class="emoji" src="img/smile_test.gif" alt=":smiley:" style="align-self: center;">
-            <p style="padding-left: 1.5%;"> <b>Hello!</b> My name is Matt Fezenko, welcome to my portfolio! I'm a
+            <container style="align-self: center; padding: 1%; ">
+            <h1 class="wave-text" style="width: max-content;">
+                <span style="--i: 0;">A</span>
+                <span style="--i: 1;">B</span>
+                <span style="--i: 2;">O</span>
+                <span style="--i: 3;">U</span>
+                <span style="--i: 4;">T</span>
+            </h1>
+            </container>
+            <p style="padding-left: 1.5%;"> Hello! My name is <b>Matt Fezenko</b>, welcome to my portfolio! I'm a
                 writer, digital artist, and game designer. My dream is to work in the video game industry as a narrative
                 designer or script writer. On this website, you'll be able to see my many projects, and have easy access
                 to contact me if you'd like to work together!
@@ -52,12 +60,23 @@
         </hgroup>
 
         <hgroup class="mini-bubble" id="projects">
-            <h1 style="align-self: center; padding: 1%;">PROJECTS</h1>
-            <p style="padding-left: 3%; align-self: center;">In my free time, I've taken on passion projects that allowed me to explore
-                my ideas and develop new skills. The following section contains all the projects I worked on during my years in college!</p>
+            <container style="align-self: center; padding: 1%; ">
+            <h1 class="wave-text" style="width: max-content;">
+                <span style="--i: 0;">P</span>
+                <span style="--i: 1;">R</span>
+                <span style="--i: 2;">O</span>
+                <span style="--i: 3;">J</span>
+                <span style="--i: 4;">E</span>
+                <span style="--i: 5;">C</span>
+                <span style="--i: 6;">T</span>
+                <span style="--i: 7;">S</span>
+            </h1>
+            </container>
+            <p style="padding-left: 3%; align-self: center;">In my free time, I've taken on passion projects that
+                allowed me to explore
+                my ideas and develop new skills. The following section contains all the projects I worked on during my
+                years in college!</p>
         </hgroup>
-
-        <!-- to:do - more mini bubbles to form an "about me" section  -->
 
         <div class="card" style="background-color:#272727;">
             <a href="https://steamcommunity.com/sharedfiles/filedetails/?id=3132301756" style="display:flex;">
@@ -92,41 +111,46 @@
             </a>
         </div>
 
-
-        <div class="card" id="AAH" style="background-color:#1c1c25;">
-            <a href="https://afterlifeafterhours.tumblr.com" style="flex-direction: column;">
-                <iframe class="video" id="AAH" style="padding-top:1%; padding-bottom:1%;"
-                    src="https://www.youtube.com/embed/videoseries?si=u2Iw6Vz8kjrTDzzK&amp;list=PL6oJCat0-7sY2JEn8Pnu3G33MvRv04XU5"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                <container>
-                    <h1 id="AAH"> Afterlife After Hours</h1>
-                    <sup id="AAH" style="color:#9291c2;"> Animated Webseries</sup>
-                    <p id="AAH"> Welcome to Afterlife After Hours, the only show in Limbo! Afterlife After
-                        Hours is a webseries featuring a fictional news show for the troubled souls of Limbo. Join
-                        Skulson and his friends as they deliver the news of an empty void and experience emotional
-                        drama, while they struggle against the trauma that keeps them from moving on! </p>
-                    <br>
-                    <p id="AAH" style="color:#d8e6ff;">Starting in 2023 and still ongoing across eight released
-                        episodes, Afterlife After Hours is my biggest
-                        passion project. The show is animated in <b>After Effects</b> using assets drawn in
-                        <b>Procreate</b> and utilizes skills across
-                        <b>Premiere Pro</b> for audio editing and <b>Audacity</b> for audio recording and mastery, all
-                        of which is done entirely by myself. Of course, I'm especially thankful to have my friends
-                        around to play
-                        the
-                        additional members of the cast.
-                    </p>
-                    <br>
-                    <p id="AAH" style="padding-bottom:2%; color:#9291c2;"><i>I've been keeping a blog of the show's
-                            development over on Tumblr. I would've put some posts in the Gallery section, but it was
-                            getting pretty laggy with all the other posts there too. So instead, you can go right to the
-                            blog by clicking on this card!</i></p>
-                </container>
-            </a>
-        </div>
-
+        <container style="display:flex; flex-direction: row;">
+            <div class="card" id="AAH">
+                <a href="https://afterlifeafterhours.tumblr.com" style="flex-direction: column;">
+                    <div class="video">
+                        <iframe class="video" id="AAH" style="margin-top:1%; margin-bottom:1%;"
+                            src="https://www.youtube.com/embed/videoseries?si=awvgt08oY44gaxiv&amp;list=PL6oJCat0-7sY2JEn8Pnu3G33MvRv04XU5"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </div>
+                    <container>
+                        <h1 id="AAH"> Afterlife After Hours</h1>
+                        <sup id="AAH" style="color:#9291c2;"> Animated Webseries</sup>
+                        <p id="AAH"> Welcome to Afterlife After Hours, the only show in Limbo! Afterlife After
+                            Hours is a webseries featuring a fictional news show for the troubled souls of Limbo. Join
+                            Skulson and his friends as they deliver the news of an empty void and experience emotional
+                            drama, while they struggle against the trauma that keeps them from moving on! </p>
+                        <br>
+                        <p id="AAH" style="color:#d8e6ff;">Starting in 2023 and still ongoing across eight released
+                            episodes, Afterlife After Hours is my biggest
+                            passion project. The show is animated in <b>After Effects</b> using assets drawn in
+                            <b>Procreate</b> and utilizes skills across
+                            <b>Premiere Pro</b> for audio editing and <b>Audacity</b> for audio recording and mastery,
+                            all
+                            of which is done entirely by myself. Of course, I'm especially thankful to have my friends
+                            around to play
+                            the
+                            additional members of the cast.
+                        </p>
+                        <br>
+                        <p id="AAH" style="padding-bottom:2%; color:#9291c2;"><i>I've been keeping a blog of the show's
+                                development over on Tumblr. I would've put some posts in the Gallery section, but it was
+                                getting pretty laggy with all the other posts there too. So instead, you can go right to
+                                the
+                                blog by clicking on this card!</i></p>
+                    </container>
+                </a>
+            </div>
+            <!-- wanted to make a side-bubble next to the AAH one. but what would I even put in it? -->
+        </container>
 
         <div class="card" style="background-color:#282524; color:#f6e4d8;">
             <a href="https://art1st1x.itch.io/quest?secret=ehEPT6ku4EMcnTQZUZpoXQLydQ" style="display:flex;">
@@ -154,8 +178,19 @@
         </div>
 
         <hgroup class="mini-bubble" id="gallery">
-            <h1 style="align-self: center; padding: 1%;">GALLERY</h1>
-            <p style="padding-left: 3%; align-self: center;">I've been drawing ever since I was only enough to pick up a pencil. It's been a
+        <container style="align-self: center; padding: 1%;">
+            <h1 class="wave-text" style="width: max-content;">
+                <span style="--i: 0;">G</span>
+                <span style="--i: 1;">A</span>
+                <span style="--i: 2;">L</span>
+                <span style="--i: 3;">L</span>
+                <span style="--i: 4;">E</span>
+                <span style="--i: 5;">R</span>
+                <span style="--i: 6;">Y</span>
+            </h1>
+            </container>
+            <p style="padding-left: 3%; align-self: center;">I've been drawing ever since I was only enough to pick up a
+                pencil. It's been a
                 hobby that has dominated my life, and is especially helpful with expressing myself and my ideas.
                 Nowadays, I use Procreate on my iPad to draw all sorts of stuff. Below is a selection of posts from my
                 Tumblr.</p>

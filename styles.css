@@ -13,14 +13,35 @@ body {
     line-height: 1.4;
     color: #e0e0e0;
     background-color: #0d0d0d;
-    height: 100%;
+    /* found this animation stuff online and wow that is really cool */
+    background: linear-gradient(
+    135deg,
+    #111111 25%,
+    #141414 25%,
+    #141414 50%,
+    #111111 50%,
+    #111111 75%,
+    #141414 75%,
+    #141414
+  );
+  background-size: 40px 40px;
+  animation: move 5s linear infinite;
+}
+
+@keyframes move {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 40px 40px;
+  }
 }
 
 html {
     scroll-behavior: smooth;
     height: 100%;
     overscroll-behavior-y: none
-    /* threw this in here and a dozen other places thinking it would make it so you can scroll while hovering over one of the Tumblr embeds. 
+        /* threw this in here and a dozen other places thinking it would make it so you can scroll while hovering over one of the Tumblr embeds. 
     it's the right property but i have no idea how to make it actually work. whatever, it's gonna stay in as a reminder of what Tumblr puts me through.*/
 }
 
@@ -51,7 +72,6 @@ ul li a {
 a {
     color: #f77898;
     text-decoration: none;
-    display: flex;
     
 }
 
@@ -68,10 +88,10 @@ ul li a:hover {
 }
 
 .video {
+    aspect-ratio: 16/9;
     border-radius: 10px;
     width: fill;
-    height: fit-content;
-    aspect-ratio: 16/9;
+    height: max-content;
     margin-bottom: 1%;
 }
 
@@ -115,7 +135,13 @@ aside {
 
 .sidebar {
     padding: 20px;
-    background-color: #1a1a1a;
+    background-color: hwb(0 13% 87%);
+    
+    background-image: radial-gradient(#2c2c2c 10%, transparent 10%),
+        radial-gradient(#2c2c2c 10%, transparent 10%);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    
     height: 100%;
 }
 
@@ -150,6 +176,22 @@ i {
 
 p {
     line-height: 2;
+}
+
+/* found this wavy text thing online but i had to reallly mess with it to make it work */
+.wave-text span {
+    display: inline-block;
+    animation: wave 2s ease-in-out infinite;
+    animation-delay: calc(var(--i) * 0.3s);
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
 }
 
 .bubble {
@@ -206,7 +248,6 @@ p {
     border-width: 5px;
     border-radius: 10px;
     border-color: #1a1a1a;
-    box-shadow: 0px 0px 0px #1a1a1a;
 
     top: 0;
     position: relative;
@@ -220,37 +261,32 @@ p {
 /* per-card stylings so I don't have to do so much styling in the HTML like a freak */
 
 #RPG {
-color: #e0e0e0;
-border-color: #1a1a1a;
-padding-left: 5%;
-padding-right: 3%;
-margin-top: 5px;
-margin-bottom: 5px;
+    color: #e0e0e0;
+    border-color: #1a1a1a;
+    padding-left: 5%;
+    padding-right: 3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #AAH {
-color:#d8e6ff;
-border-color: #13111a;
-padding-left: 3%;
-padding-right: 3%;
-margin-top: 5px;
-margin-bottom: 5px;
+    color: #d8e6ff;
+    background-color:#1c1c25;
+    border-color: #13111a;
+    padding-left: 2%;
+    padding-right: 2%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #QUEST {
-color:#f6e4d8;
-background-color:#282524;
-border-color: #282524;
-padding-left: 5%;
-padding-right: 3%;
-margin-top: 5px;
-margin-bottom: 5px;
-}
-
-#gallery {
-padding-left: 3%;
-padding-top: 1%;
-padding-right: 3%;
+    color: #f6e4d8;
+    background-color: #282524;
+    border-color: #282524;
+    padding-left: 5%;
+    padding-right: 3%;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .mini-bubble {
@@ -265,7 +301,7 @@ padding-right: 3%;
     position: relative;
     background: #2c161a;
     border-style: solid;
-    border-color:rgb(207, 31, 84);
+    border-color: rgb(207, 31, 84);
     border-radius: 10px;
     transition: 0.5s;
 }
@@ -345,7 +381,9 @@ footer {
 @media screen and (max-width: 1222px) {
 
     .container,
-    .bubble, .card, a {
+    .bubble,
+    .card,
+    a {
         flex-direction: column;
     }
 
@@ -353,6 +391,15 @@ footer {
         max-width: min-content;
         height: auto;
         margin-bottom: 1%;
+    }
+
+    #AAH-side {
+        display: none;
+        visibility: hidden;
+    }
+
+    #AAH-card {
+        max-width: fit-content;
     }
 
 }
@@ -387,12 +434,18 @@ footer {
 /*mobile-sized stuff */
 @media screen and (max-width: 690px) {
 
-    ul, .sidebar, .bubble:after, .mini-bubble:after {
+    ul,
+    .sidebar,
+    .bubble:after,
+    .mini-bubble:after {
         visibility: hidden;
     }
 
     .container,
-    .bubble, .card, .mini-bubble, .gallery-bubble {
+    .bubble,
+    .card,
+    .mini-bubble,
+    .gallery-bubble {
         flex-direction: column;
         margin-left: 10px;
         margin-right: 10px;
@@ -407,7 +460,7 @@ footer {
         max-width: min-content;
         height: auto;
         margin-bottom: 1%;
-        
+
     }
 
     .grid {
